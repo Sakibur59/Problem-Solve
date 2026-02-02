@@ -19,3 +19,28 @@ function cheapestPhone(mobile){
 
 const cheapestOne = cheapestPhone(mobiles);
 console.log("Cheapest Phone price: ",cheapestOne);
+
+
+// for Highest Phone
+
+const mobiles2 = [
+    {name:"Motorola",Price:48000,Color:"Blue"},
+    {name:"Redmi",Price:35000,Color:"Black"},
+    {name:"Iphone",Price:154000,Color:"Orange"},
+    {name:"Oppo",Price:32000,Color:"White"},
+    {name:"Nokia",Price:12000,Color:"Blue"},
+
+]
+
+function HighestPhone(mobile){
+    let High = mobile[0];
+    for (const phone of mobile) {
+        if(phone.Price > High.Price){
+            High = phone;
+        }
+    }
+    return High;
+}
+
+const HighestOne = HighestPhone(mobiles2);
+console.log("Highest Phone price: ",HighestOne);
